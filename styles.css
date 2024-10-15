@@ -330,3 +330,8 @@ footer {
     margin: 50px 20px;
   }
 }
+
+.button-container {
+  display: flex;
+  gap: 15px; /* Adjust the spacing between buttons as needed */
+}
