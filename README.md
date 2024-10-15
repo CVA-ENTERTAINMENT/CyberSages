@@ -1,27 +1,27 @@
-# CyberSages
+How to run the User Registration & Login and User Management System With admin panel Project
 
--- Create table for users
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    email VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+1. Download the  zip file
 
+2. Extract the file and copy loginsystem folder
 
--- Create table for admins
-CREATE TABLE admins (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    email VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+3.Paste inside root directory(for xampp xampp/htdocs, for wamp wamp/www, for lamp var/www/html)
 
+4. Open PHPMyAdmin (http://localhost/phpmyadmin)
 
--- Create table for attendance
-CREATE TABLE attendance (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    attendance_date DATE,
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
-);
+5. Create a database with name loginsystem
+
+6. Import loginsystem.sql file(given inside the zip package in SQL file folder)
+
+7.Run the script http://localhost/loginsystem (frontend)
+
+8. For admin Panel http://localhost/loginsystem/admin
+
+Credential for admin panel :
+
+Username: admin
+Password: Test@12345
+
+Credential for user panel : 
+
+Username: johndoe12@gamil.com
+Password : Test@12345
