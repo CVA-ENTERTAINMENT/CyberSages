@@ -21,7 +21,8 @@
             </ul>
             <div class="button-container">
                 <a href="login.php" class="login-btn">Login</a>
-                <a href="signup.php" class="login-btn">Sign Up</a> 
+                <a href="signup.php" class="login-btn">Sign Up</a>
+                <a href="admin" class="login-btn">Admin</a>
             </div>
         </nav>
         
