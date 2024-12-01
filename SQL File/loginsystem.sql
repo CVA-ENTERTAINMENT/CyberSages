@@ -40,7 +40,7 @@ CREATE TABLE `admin` (
 INSERT INTO `admin` (`id`, `username`, `password`) VALUES
 (1, 'admin', '5c428d8875d2948607f3e3fe134d71b4');
 
--- --------------------------------------------------------
+----------------------------------------------------------
 
 --
 -- Table structure for table `users`
@@ -63,6 +63,16 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `fname`, `lname`, `email`, `password`, `contactno`, `posting_date`) VALUES
 (1, 'Harresh', 'Varrmar', 'harreshvarrmar@gmail.com', 'Test@123', '0123456789', '2024-10-15 06:15:52'),
 (2, 'Karthi', 'Loganathan', 'karthi@gamil.com', 'Test@12345', '01269876969', '2024-10-15 06:35:03');
+
+----------------------------------------------------------
+CREATE TABLE `cart_items` (
+  `id` int(11) NOT NULL,
+  `product_name` varchar(255) NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `total_price` decimal(10,2) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
@@ -96,6 +106,18 @@ ALTER TABLE `admin`
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
+
+ALTER TABLE `cart_items`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `cart_items`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
