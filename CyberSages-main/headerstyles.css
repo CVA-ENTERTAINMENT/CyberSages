@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+  
+body {
+    background: #111;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+header {
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .navbar .logo {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #00ffea;
+    text-shadow: 0 0 5px #00ffea;
+  }
+  
+  .login-btn {
+    background-color: #00ffea;
+    padding: 10px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.4s ease, transform 0.4s ease;
+  }
+  
+  .login-btn:hover {
+    background-color: #007bff;
+    transform: scale(1.1);
+  }
+  
